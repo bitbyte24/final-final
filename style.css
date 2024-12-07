@@ -153,6 +153,8 @@ view{
 
 .miss{
     border-radius:10px;
+    width:300px;
+    height:250px;
 }
 /*            ------user-form content (css)--------         */
 .form{
