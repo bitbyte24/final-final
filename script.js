@@ -1,66 +1,145 @@
-function hide(){
-    var menu=document.getElementById('sideMenu')
-    menu.style.width='0';
-}
-function show(){
-    var menu=document.getElementById('sideMenu')
-    menu.style.width='max-Content';
-}
-function help(){
-    setTimeout(() => {
-        help1()
-    }, 5000);function help1(){
-        var msg=document.getElementById('msg')
-        msg.style.width='max-Content';
-    }
-    setTimeout(() => {
-        help2()
-    }, 10000);function help2(){
-        var msg=document.getElementById('msg')
-        msg.style.width='0';
-    }
-}
-window.onscrollend(help());
 
-function call(){
-    var me=document.getElementById('me2');
+function hideList(){
+    var hidden=document.getElementById('productList');
+    var name=document.getElementById('intro');
+    hidden.style.height='0';
+    name.style.opacity='';return false;
+}
+function produce(){
+    var hidden=document.getElementById('productList');
+    var name=document.getElementById('intro');
+    hidden.style.height='max-Content';
+    if(hidden.style.height='max-Content'){
+       name.style.opacity='0.1' ;
+    }
+}
+function showMenu(){
+    var menu=document.getElementById('sideMenu');
+    var name=document.getElementById('intro');
+    menu.style.height='max-Content';
+    if(menu.style.height='max-Content'){
+        name.style.opacity='0.1' ;
+     }else{
+        name.style.opacity='';return false;
+     }
+}
+function quitMenu(){
+    var menu=document.getElementById('sideMenu');
+    var name=document.getElementById('intro');
+    menu.style.height='0';
+    if(menu.style.height='0'){
+        name.style.opacity='';return false;
+    }
+    
+}
+function read(){
+    alert('Oops! we are sorry,\nthis content is still under review.\nyou will be notified when available.\nthank you\n\n\n..........Giltous Exclusive.........')}
+
     setInterval(() => {
-        lightRed()
-    }, 1000);function lightRed(){
-        me.style.borderColor='green';
+        blink()
+    }, 10000);function blink(){
+        var doc=document.getElementById('logo');
+        var light= doc.style.color='yellow';
+        var dark=doc.style.backgroundColor='black';
+        if(doc=light){
+            doc=dark
+        }else{return true;}
     }
-} 
-call();
-
-//----user-form content function------/
-//--------------000000\\\\\\\\\\\\\\\\\\
-function form(){
-    var formFill=document.getElementById('form1')
-    formFill.style.width='300px';
-    formFill.style.height='';
-}
-function ignore(){
-    var formFill=document.getElementById('form1')
-    formFill.style.width='0';
-    formFill.style.height='0';
-}
-function register(){
-    var reg=document.getElementById('registror')
-    reg.style.maxWidth='450px';
-    reg.style.height='max-Content';
-}
-
-function leave(){
-    var reg=document.getElementById('registror')
-    reg.style.maxWidth="0";
-    reg.style.height="0";
-}
-
-function quitSign(){
-    var sign=document.getElementById('sign-in')
-    sign.style.maxWidth='0';
-}
-function sign(){
-    var sign=document.getElementById('sign-in')
-    sign.style.maxWidth='450px';
-}
+    setInterval(() => {
+        unBlink()
+    }, 20000);function unBlink(){
+        var doc=document.getElementById('logo');
+        var light2= doc.style.color='black';
+        var dark1=doc.style.backgroundColor='yellow';
+        if(doc=light2){
+            doc=dark1
+        }else{return true;}
+    }
+    function servicesMissing(){
+        alert('Oops! sorry,the services here are still under review,\nyou will be notified when available.\nthank you.\n\n\n\n..........Giltous Exclusive.........')
+    }
+    setInterval(() => {
+        showTheme()
+    }, 4000);function  showTheme(){
+        var them1=document.getElementById('advise-user-about-theme');
+        them1.style.height='0'
+    }
+    setInterval(() => {
+        hideTheme()
+    }, 20000);function hideTheme(){
+        var them1=document.getElementById('advise-user-about-theme');
+        them1.style.height='';return true;
+    }
+    function giveYourDesign(){
+        var design=document.getElementById('choice-design');
+        design.style.width='max-Content';
+        design.style.height='max-Content';return true;
+    }
+    function quitChoiceDesign(){
+        var design=document.getElementById('choice-design');
+        design.style.width='0';
+        design.style.height='0';return true;
+    }
+    function checkPicture(){
+        var capturer=document.getElementById('picture');
+        if(capturer.file()=null){
+            capturer.style.color='red';
+            setTimeout(() => {
+                emptyWarning()
+            }, 200);function emptyWarning(){
+                alert('no file to send,please select one!')
+            }
+        }else{
+            return true;
+        }
+    }
+    function sendMessageToWhatsApp() {
+        const phoneNumber = '+256765003100'; // Replace with the WhatsApp number, e.g., "1234567890"
+        const message = "Hello umar, I found this useful. Let's talk about it.";
+        
+        // Encode the message for use in a URL
+        const encodedMessage = encodeURIComponent(message);
+        
+        // Construct the WhatsApp URL with the phone number and message
+        const whatsappURL = `https://wa.me/${'+256765003100'}?text=${encodedMessage}`;
+        
+        // Open the URL in a new tab
+        window.open(whatsappURL, '_blank');
+    }
+    
+    function buy(){
+        var retVal=confirm('You have clicked a button for purchasing,confirm to continue!');
+        if(retVal==true){
+            document.write('alright,choose payment method');
+            return true;
+        }else{
+            
+            return false;
+        }
+    }
+    function details(){
+        var details=confirm('hello,you are opening the image details,click ok to continue')
+        if(details==true){
+            document.write('<h1>PRODUCT DETAILS\n\n<iframe  id="image" src="https://drive.google.com/file/d/1F6EHCZX59NF7pUdFrzjutV-khTSAD1V9/preview" height="250px" width="300px" allow="autoplay"></iframe>\n\n<button class="view" onclick="buy()">Buy</button><button onclick="backToPage()">back to list</button>')
+            return true;
+        }else{
+            return false;
+        }
+    }
+    function backToPage(){
+        window.close();
+    }
+    function warn(){
+        alert('Oops! the showroom is under construction.you will be notified when ready.\n\nthank you.\n\n\n\n\n...................Giltous Exclusive.............')
+    }
+    
+    function openAccount(){
+    alert('sorry,the registration forms are still under construction,you will be notified when ready.\nthank you')
+    }
+    function warn(){
+        setTimeout(() => {
+            warnMe()
+        }, 10000);function warnMe(){
+            alert('warning\n\n\nthis website is under development,some features may not work.\n\n\nthank you')
+        }
+    }warn();
