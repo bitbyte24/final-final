@@ -22,7 +22,7 @@
             <ul>
                 <li id="call-me" onclick="produce()">products </li>
         
-            <a href="tel:(+256)(705305731)"><li id="call-me">contact</li></a></ul>
+            <a href="tel:(+256)(705305731)"><li id="call-me"><button class="contact">contact</button></li></a></ul>
             <div id="menu" onclick="showMenu()">≡</div>
         </div>
         <!----product lists code-->
@@ -44,8 +44,7 @@
             </div>
         </div>
         <!---side menu code-->
-        <div id="sideMenu">
-            <span id="sideMenu-title"><h1 class="menu-heading">GILTOUS EXCLUSIVE</h1></span><br><br><br><br><br><br>
+        <div id="sideMenu"><br><h2 style="color:purple;font-weight:bolder;padding:5px;">GILTOUS FURNITURE</h2><br>
             <div class="menu-items">
                 <li class="line-item" onclick="read()">About us</li>
                 <li class="line-item" onclick="servicesMissing()">Services</li>
@@ -53,22 +52,22 @@
                 <li class="line-item">Contact us</li>
                 <li class="line-item">Terms and conditions</li>
                 <li class="line-item">security policy</li>
-            </div><br><br><br><br><br><br><br><br><br><br>
-            <div class="menu-nav">
-                <h4>For more inquiries about giltous exclusive,give us an email at <a class="high-lighter">(gilbertmugume@gmail.com)</a>
-                    or visit our social media platforms below;
+            </div><br><br>
+            
+                <h4>For more inquiries about giltous exclusive,visit our social media platforms below;
 
-
-
-                    <!----social media platforms-->
-
-
-
-
-                    <br><br>
+                    <div class="social-media-icons"><br>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="https://wa.me/256705305731"><i class="fa fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-telegram"></i></a>
+                        
+                    </div><br>
                     <button class="quit-menu" onclick="quitMenu()">Quit menu</button>
                 </h4>
-            </div>
+            
         </div>
         <br>
         <div class="locked">
@@ -86,109 +85,171 @@ document.getElementById("yourtext").innerHTML="";
 window.onload=go;
 </script>
 <br>
-<div class="specify-purpose"><br>
+<div class="specify-purpose">
     <h3 class="purpose"> 
         <h1><span id="yourtext" >GILTOUS EXCLUSIVE HOME FURNITURE</span></h1>
         <h3 class="sub-title">CUSTOM AND READY MADE</h3></h3>
 </div>
 <div class="box3">
-    <img class="miss" src="head.jpg"></img>
-<div class="item3" id="direction">Feel like a king in your home with Giltous Exclusive Home furniture
-    <br>
-    <div class="slideBox">
-        <div class="slides"> <!-----code missing for sliding images------></div>
-        <div class="slides"></div>
-        <div class="slides"></div>
-        <div class="slides"></div>
+    <div class="scroll-parent">
+        <div class="scroll-element primary">
+         <img class="slide" src="j.jpg">
+         <img class="slide" src="sofa14.jpg">
+         <img class="slide" src="sofa13.jpg">
+         <img class="slide" src="sofa12.jpg">
+         <img class="slide" src="SOFA4.jpg">
+         <img class="slide" src="0.jpg">
+         <img class="slide" src="6.jpg">
+         <img class="slide" src="5.jpg">
+         <img class="slide" src="8.jpg">
+         <img class="slide" src="L6.jpg">
+         <img class="slide" src="36.jpg">
+         <img class="slide" src="0.jpg">
+         <img class="slide" src="11.jpg">
+         <img class="slide" src="7.jpg">
+         <img class="slide" src="35.jpg">
+         <img class="slide" src="36.jpg">
+         <img class="slide" src="37.jpg">
+        </div>
     </div>
 </div>
+    
+
+<div class="item3" id="direction">Feel like a king in your home with Giltous Exclusive Home furniture
+    
+    
 </div>
-<button class="discount">claim your discount</button><br><br>
+</div>
+<button class="discount" onclick="discount()">claim your discount</button><br><br>
 
 <div class="back">
-    <div style="color:rgb(241, 241, 241);text-transform: capitalize;font-weight: bolder;text-shadow:0 4px 3px black;font-size:20px;">reach out for giltous</div><br>
+    <div style="color:rgb(14, 14, 102);text-transform: capitalize;font-weight: bolder;text-shadow:0 4px 3px black;font-size:20px;">reach out for giltous</div><br>
 <div class="box4">
     
     <div class="item4">
-        <button class="reach">contact</button>
-        <button class="reach">email</button>
-        <button class="reach">branches</button>
+        <a href="tel:(256)(705305731)"><button class="reach">contact</button></a>
+        <a href="mailto:(giltousexclusivefurn@gmail.com)"><button class="reach">email</button></a>
+        <a href="branches.html" target="_blank"><button  class="reach">branches</button></a>
     </div>
     <div class="item4">
         <text class="social-media">social media</text>
         <div class="social-media-icons">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-whatsapp"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-twitter"></i>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="https://wa.me/256705305731"><i class="fa fa-whatsapp"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
         </div>
     </div>
 </div>
      <h3 class="shopping">open a shopping account</h3>   
-     <button class="register" onclick="openAccount()">register</button>
-        
+     <button class="register" onclick="Register()">register</button>
+
+     <!---USER-FORM CONTENT-->
+   <div id="forms">
+    <form type="submit" name="myForm" class="form2">
+        <div class="line-header">LOGIN <button class="exit" onclick="exit()">x</button></div><br>
+        <input class="dash-fill" type="email" placeholder="email/phone" />
+        <input class="dash-fill" type="password" placeholder="password" maxlength="8" /><br><br>
+        <input type="radio"><label>i agree to the terms and conditions of giltous exclusive home furniture</label><br><br>
+        <button type="submit" class="register" onclick="login()">login</button><br><br>
+    </form>
+    
+    <h4 style="color:white;border:1px solid none;display:flex;gap:10px;margin-left:10px;">didn't have an account?<div class="sign" onclick="signUp()">signup</div></h4>
+
+    <!----user-form signup contents-->
+    <div id="user-signs">
+        <div class="form-container">
+            <div class="sign-header">SIGNUP <button class="exit" onclick="quitSign()">x</button></div>
+            <div class="user-interface">
+                <form type="submit" method="post" class="form3">
+                    <input class="dash-fill" type="text" placeholder="first name" required/>
+                    <input class="dash-fill" type="text" placeholder="last name" required/>
+                    <input class="dash-fill" type="email" placeholder="email" required />
+                    <input class="dash-fill" type="tel" placeholder="phone" rquired />
+                    <input class="dash-fill" type="date" required />
+                    <select class="dash-fill" required>
+                        <option value1="select gender">select gender</option>
+                        <option value2="male">male</option>
+                        <option value3="female">female</option>
+                        <option value4="other">other</option>
+                    </select><br>
+                    <input type="radio"><label>i agree with the terms and conditions of giltous exclusive home furniture</label><br><br>
+                    <button type="submit" class="register">submit</button><br><br>
+            </div>
+            </form>
+            <div class="social-media-icons">
+                <h3 class="icon">sign in with google<i class="fa fa-google" id="fa"></i></h3>
+                <h3 class="icon">sign in with facebook<i class="fa fa-facebook" id="fa"></i></h3>
+            </div>
+        </div>
+    </div>
+    <div class="social-media-icons">
+        <h3 class="icon">sign in with google<i class="fa fa-google" id="fa"></i></h3>
+        <h3 class="icon">sign in with facebook<i class="fa fa-facebook" id="fa"></i></h3>
+    </div>
+   </div>
 </div>
 </div>
         </div>
             </div>
             <!-----second body item,to create a second page like container on a single screen-->
-            <div class="item"><br><br>
+            <div class="item">
                 <div class="order" id="order">
-                    <br><br>
-                    <h3 class="header">make all the shopping here</h3>
+                    
+                    <h3 class="header">make all the shopping here<br>
+                    <img class="shop" src="shop.png"></h3>
                     <hp class="categories">
-                        <button class="cat5">sofas</button>
+                        <a href="sofas.html"><button class="cat5">sofas</button></a>
                         <button class="cat5">beds</button>
                         <button class="cat5">wardrobes</button>
                         <button class="cat5">tv stands</button>
                         <button class="cat5">center tables</button>
                         <button class="cat5">sideboards</button>
-                    </hp><br>
+                        <button class="cat5">others</button>
+                    </hp><br><br>
                         <div class="check">Trending Sofas</div>
-                        <p>we give you an opportunity to order with us any design of your choice.
-                            Here,we provide to you the trending designs.
+                        <p>
                         <div class="box3">
                             <div class="item3">
                                 <img class="miss" src="30.jpg">
                                 <div class="image-buttons">
-                                    <button class="details">visit</button>
+                                    <button class="details" onclick="getLinkWhastapp()">visit</button>
                                 </div>
                             </div>
                             <div class="item3">
-                                <img class="miss" src="34-copy.jpg">
+                                <img class="miss" src="0.jpg">
                                 <div class="image-buttons">
                                     <button class="details">visit</button>
                                 </div>
                             </div>
                             <div class="item3">
-                                <img class="miss" src="36-copy.jpg">
+                                <img class="miss" src="sofa13.jpg">
                                 <div class="image-buttons">
                                     <button class="details">visit</button>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="check">Trending Beds</div><br><br>
+                            </div><br><br>
+                        <div class="check">Trending Beds</div>
                         <div class="box3">
                             <div class="item3">
-                                <img class="miss" src="child - Copy.jpg">
+                                <img class="miss" src="bed13.jpg">
                                 <div class="image-buttons">
                                     <button class="details">visit</button>
                                 </div>
                             </div>
                             <div class="item3">
-                                <img class="miss" src="bed4-Copy.jpg">
+                                <img class="miss" src="bed17.jpg">
                                 <div class="image-buttons">
                                     <button class="details">visit</button>
                                 </div>
                             </div>
                             <div class="item3">
-                                <img class="miss" src="bed6-Copy.jpg">
+                                <img class="miss" src="bed14.jpg">
                                 <div class="image-buttons">
                                     <button class="details">visit</button>
                                 </div>
                             </div>
                             <div class="item3">
-                                <img class="miss" src="bed17-Copy.jpg">
+                                <img class="miss" src="bed15.jpg">
                                 <div class="image-buttons">
                                     <button class="details">visit</button>
                                 </div>
@@ -196,7 +257,11 @@ window.onload=go;
                         
                             <!-----picture codes missing---->
                         </div><br><br>
-                        <div class="showroom" onclick="warn()">Visit Showroom</div>
+                        <div class="showroom" onclick="warn()"><br><br><h2 class="visit-show">
+                            Visit Showroom for more stuff<br>
+                            <button class="discount">visit</button>
+                           </h2>
+                        </div>
                     </p>
                     <div class="item" id="note1">
                         <h4>didn't find your favorite?</h4>
@@ -286,7 +351,7 @@ window.onload=go;
             </div>
             
         </div>
-        <button class="feedback" onclick="sendMessageToWhatsApp()">feedback</button>
+        <button class="feedback" id="feed1" onclick="sendMessageToWhatsApp()">feedback</button>
         
       <div id="choice-design">
                             <form type="form" class="myForm" method="POST" mailto="atuhaumar2@gmail.com">
@@ -331,28 +396,10 @@ window.onload=go;
                             .get-me{background-color:green;color:white;padding:10px 20px;border:0;border-radius:10px;}
                         </style>
                         <script>
-                            function demand(){
-                                var dem=document.getElementById('close')
-                                setTimeout(() => {
-                                    own()
-                                }, 10000);function own(){
-                                    dem.style.height='1000px';
-                                }
-                            }demand();
-                            function blink(){
-                                var color=document.getElementById('restrict')
-                                setInterval(() => {
-                                    light()
-                                }, 500);function light(){
-                                    color.style.color='rgb(48,45,45)';
-                                }
-                                setInterval(() => {
-                                    lightOff()
-                                }, 1000);function lightOff(){
-                                    color.style.color='red'
-                                }
-                            }blink(;
+                            
                         </script>
+                        </body>
+                        </html>
     </body>
    
 </html>
