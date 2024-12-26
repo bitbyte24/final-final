@@ -80,22 +80,10 @@ function read(){
         design.style.width='0';
         design.style.height='0';return true;
     }
-    function checkPicture(){
-        var capturer=document.getElementById('picture');
-        if(capturer.file()=null){
-            capturer.style.color='red';
-            setTimeout(() => {
-                emptyWarning()
-            }, 200);function emptyWarning(){
-                alert('no file to send,please select one!')
-            }
-        }else{
-            return true;
-        }
-    }
+    
     function sendMessageToWhatsApp() {
         const phoneNumber = '+256765003100'; // Replace with the WhatsApp number, e.g., "1234567890"
-        const message = "Hello umar, I found this useful. Let's talk about it.";
+        const message = "Hello giltous admin, I found this useful. Let's talk about it.";
         
         // Encode the message for use in a URL
         const encodedMessage = encodeURIComponent(message);
@@ -107,39 +95,26 @@ function read(){
         window.open(whatsappURL, '_blank');
     }
     
-    function buy(){
-        var retVal=confirm('You have clicked a button for purchasing,confirm to continue!');
-        if(retVal==true){
-            document.write('alright,choose payment method');
-            return true;
-        }else{
-            
-            return false;
-        }
-    }
-    function details(){
-        var details=confirm('hello,you are opening the image details,click ok to continue')
-        if(details==true){
-            document.write('<h1>PRODUCT DETAILS\n\n<iframe  id="image" src="https://drive.google.com/file/d/1F6EHCZX59NF7pUdFrzjutV-khTSAD1V9/preview" height="250px" width="300px" allow="autoplay"></iframe>\n\n<button class="view" onclick="buy()">Buy</button><button onclick="backToPage()">back to list</button>')
-            return true;
-        }else{
-            return false;
-        }
-    }
-    function backToPage(){
-        window.close();
-    }
-    function warn(){
-        alert('Oops! the showroom is under construction.you will be notified when ready.\n\nthank you.\n\n\n\n\n...................Giltous Exclusive.............')
-    }
     
-    function openAccount(){
-    alert('sorry,the registration forms are still under construction,you will be notified when ready.\nthank you')
-    }
-    function warn(){
-        setTimeout(() => {
-            warnMe()
-        }, 10000);function warnMe(){
-            alert('warning\n\n\nthis website is under development,some features may not work.\n\n\nthank you')
-        }
-    }warn();
+      
+    
+function exit(){
+    var getBack=document.getElementById('forms')
+    getBack.style.width='0';
+}
+function Register(){
+    var exx=document.getElementById('forms')
+    exx.style.maxHeight='800px';
+}
+
+function signUp(){
+    var sixth=document.getElementById('user-signs')
+    
+    sixth.style.height='700px'
+    
+}
+function quitSign(){
+    var sixth=document.getElementById('user-signs')
+    sixth.style.height='0'
+    
+}
