@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1 class="pay-head">Product Details</h1>
+    <div id="product-details">
+        <h5 style="color:red;">so fresh and clean</h5>
+    </div>
+
+    <script>
+        const productDetails = JSON.parse(localStorage.getItem('productDetails'));
+        const productDetailsElement = document.getElementById('product-details');
+        productDetailsElement.innerHTML = `
+            <h2>${productDetails.name}</h2>
+            <p>Price: ${productDetails.price}</p>
+            <img src="product-image.jpg" alt="Product Image">`;
+    </script>
+    <div id="pending">
+        <div class="loader-name"></div>
+        <div class="loader"></div>
+    </div>
+</body>
+</html>
