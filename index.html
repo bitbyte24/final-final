@@ -1,405 +1,176 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width" charset="utf-8" initial-scale="1.0">
-        <title>giltous exclusive</title>
-        <noscript>Sorry,the current browser does not support javascript<br>
-            try using a different browser (google chrome,edge etc..) or enable javascript
-        in your browser settings.thank you for visiting Giltous Exclusive</noscript>
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GILTOUS EXCLUSIVE HOME FURNITURE</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="van3"></div>
+    <div class="van">
+        <div class="log1">logo</div>
+        <div class="title1">GILTOUS FURNITURE
+        </div>
+        <div class="hambarger" onclick="clearMenuBring()"><i class="fa fa-navicon" id="menu-bar"></i></div>
         
-    </head>
-    <body id="body">
-        <div class="box">
-            <!-----first body item,to create a first page  like container for holding the introductory statements-->
-            <div class="item" id="fix">
-                
-       <div class="container1">
-        <div class="nav">
-            <span class="logo" id="logo">GILTOUS </span>
-            <ul>
-                <li id="call-me" onclick="produce()">products </li>
-        
-            <a href="tel:(+256)(705305731)"><li id="call-me"><button class="contact">contact</button></li></a></ul>
-            <div id="menu" onclick="showMenu()">≡</div>
-        </div>
-        <!----product lists code-->
-        <div id="productList">
-            <br><div class="list-shape">
-                <h4 class="line-header">Our Products;</h4>
-                <div class="lists">
-                    <li class="line">sofa sets</li>
-                <li class="line">beds (all categories)</li>
-                <li class="line">sideboards</li>
-                <li class="line">wardrobes</li>
-                <li class="line">dressing mirrors</li>
-                <li class="line">bedside lamps</li>
-                <li class="line">center tables</li>
-                <li class="line">more...</li><br>
+    </div>
+    <!---side menu page content---
+        ------------------------------>
+        <div id="clear-page-menu" onclick="quitSite()">
+            <div class="clear-item">
+                    <li class="clear-lines"><button class="line" onclick="clearMenu()">home</button></li>               
+                    <li class="clear-lines"><button class="line">contacts</button></li>
+                    <a href="account.html"><li class="clear-lines"><button class="line">account</button></li></a>
+                    <a href="branches.html"><li class="clear-lines"><button class="line">branches</button></li></a>
+                    <li class="clear-lines"><button class="line" onclick="siteTheme()">change theme</button></li>
+                <div id="extra-menu">
+                    <h3 class="clear-page-director">change theme</h3>
+                    <i class="fa fa-moon-o" onclick="themeTurn()"></i>
+                    <i class="fa fa-sun-o" onclick="themeBack()"></i><br><br>
                 </div>
-            <h4 class="list-of-services" onclick="servicesMissing()">view available services</h4>
-            <button class="hide-lists" onclick="hideList()">quit</button>
+                <h3 class="clear-page-director">find us on our social media platforms<br><br>
+                    <i class="fa fa-whatsapp" onclick="chart()"></i>
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-youtube"></i>
+                    <i class="fa fa-twitter"></i>
+                </h3>
             </div>
         </div>
-        <!---side menu code-->
-        <div id="sideMenu"><br><h2 style="color:purple;font-weight:bolder;padding:5px;">GILTOUS FURNITURE</h2><br>
-            <div class="menu-items">
-                <li class="line-item" onclick="read()">About us</li>
-                <li class="line-item" onclick="servicesMissing()">Services</li>
-                <li class="line-item" >Products</li>
-                <li class="line-item">Contact us</li>
-                <li class="line-item">Terms and conditions</li>
-                <li class="line-item">security policy</li>
-            </div><br><br>
-            
-                <h4>For more inquiries about giltous exclusive,visit our social media platforms below;
-
-                    <div class="social-media-icons"><br>
-                        <a href="#"><i class="fa fa-facebook"></i></a>
-                        <a href="https://wa.me/256705305731"><i class="fa fa-whatsapp"></i></a>
-                        <a href="#"><i class="fa fa-youtube"></i></a>
-                        <a href="#"><i class="fa fa-twitter"></i></a>
-                        <a href="#"><i class="fa fa-instagram"></i></a>
-                        <a href="#"><i class="fa fa-telegram"></i></a>
-                        
-                    </div><br>
-                    <button class="quit-menu" onclick="quitMenu()">Quit menu</button>
-                </h4>
-            
-        </div>
-        <br>
-        <div class="locked">
-            <script>
-var yourT=document.getElementById("yourtext");
-var innerH=yourT.innerHTML;
-var innerL=innerH.length;
-var count=0;
-function doit(){
-	if (count<innerL){		document.getElementById("yourtext").innerHTML+=innerH.charAt(count);		count++;	} 
-else{clearInterval(Timer)};}
-function go(){	
-document.getElementById("yourtext").innerHTML="";
-	Timer=setInterval("doit()",200);}
-window.onload=go;
-</script>
-<br>
-<div class="specify-purpose">
-    <h3 class="purpose"> 
-        <h1><span id="yourtext" >GILTOUS EXCLUSIVE HOME FURNITURE</span></h1>
-        <h3 class="sub-title">CUSTOM AND READY MADE</h3></h3>
-</div>
-<div class="box3">
-    <div class="scroll-parent">
-        <div class="scroll-element primary">
-         <img class="slide" src="j.jpg">
-         <img class="slide" src="sofa14.jpg">
-         <img class="slide" src="sofa13.jpg">
-         <img class="slide" src="sofa12.jpg">
-         <img class="slide" src="SOFA4.jpg">
-         <img class="slide" src="0.jpg">
-         <img class="slide" src="6.jpg">
-         <img class="slide" src="5.jpg">
-         <img class="slide" src="8.jpg">
-         <img class="slide" src="L6.jpg">
-         <img class="slide" src="36.jpg">
-         <img class="slide" src="0.jpg">
-         <img class="slide" src="11.jpg">
-         <img class="slide" src="7.jpg">
-         <img class="slide" src="35.jpg">
-         <img class="slide" src="36.jpg">
-         <img class="slide" src="37.jpg">
-        </div>
-    </div>
-</div>
-    
-
-<div class="item3" id="direction">Feel like a king in your home with Giltous Exclusive Home furniture
-    
-    
-</div>
-</div>
-<button class="discount" onclick="discount()">claim your discount</button><br><br>
-
-<div class="back">
-    <div style="color:rgb(14, 14, 102);text-transform: capitalize;font-weight: bolder;text-shadow:0 4px 3px black;font-size:20px;">reach out for giltous</div><br>
-<div class="box4">
-    
-    <div class="item4">
-        <a href="tel:(256)(705305731)"><button class="reach">contact</button></a>
-        <a href="mailto:(giltousexclusivefurn@gmail.com)"><button class="reach">email</button></a>
-        <a href="branches.html" target="_blank"><button  class="reach">branches</button></a>
-    </div>
-    <div class="item4">
-        <text class="social-media">social media</text>
-        <div class="social-media-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="https://wa.me/256705305731"><i class="fa fa-whatsapp"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-        </div>
-    </div>
-</div>
-     <h3 class="shopping">open a shopping account</h3>   
-     <button class="register" onclick="Register()">register</button>
-
-     <!---USER-FORM CONTENT-->
-   <div id="forms">
-    <form type="submit" name="myForm" class="form2">
-        <div class="line-header">LOGIN <button class="exit" onclick="exit()">x</button></div><br>
-        <input class="dash-fill" type="email" placeholder="email/phone" />
-        <input class="dash-fill" type="password" placeholder="password" maxlength="8" /><br><br>
-        <input type="radio"><label>i agree to the terms and conditions of giltous exclusive home furniture</label><br><br>
-        <button type="submit" class="register" onclick="login()">login</button><br><br>
-    </form>
-    
-    <h4 style="color:white;border:1px solid none;display:flex;gap:10px;margin-left:10px;">didn't have an account?<div class="sign" onclick="signUp()">signup</div></h4>
-
-    <!----user-form signup contents-->
-    <div id="user-signs">
-        <div class="form-container">
-            <div class="sign-header">SIGNUP <button class="exit" onclick="quitSign()">x</button></div>
-            <div class="user-interface">
-                <form type="submit" method="post" class="form3">
-                    <input class="dash-fill" type="text" placeholder="first name" required/>
-                    <input class="dash-fill" type="text" placeholder="last name" required/>
-                    <input class="dash-fill" type="email" placeholder="email" required />
-                    <input class="dash-fill" type="tel" placeholder="phone" rquired />
-                    <input class="dash-fill" type="date" required />
-                    <select class="dash-fill" required>
-                        <option value1="select gender">select gender</option>
-                        <option value2="male">male</option>
-                        <option value3="female">female</option>
-                        <option value4="other">other</option>
-                    </select><br>
-                    <input type="radio"><label>i agree with the terms and conditions of giltous exclusive home furniture</label><br><br>
-                    <button type="submit" class="register">submit</button><br><br>
-            </div>
-            </form>
-            <div class="social-media-icons">
-                <h3 class="icon">sign in with google<i class="fa fa-google" id="fa"></i></h3>
-                <h3 class="icon">sign in with facebook<i class="fa fa-facebook" id="fa"></i></h3>
-            </div>
-        </div>
-    </div>
-    <div class="social-media-icons">
-        <h3 class="icon">sign in with google<i class="fa fa-google" id="fa"></i></h3>
-        <h3 class="icon">sign in with facebook<i class="fa fa-facebook" id="fa"></i></h3>
-    </div>
-   </div>
-</div>
-</div>
-        </div>
-            </div>
-            <!-----second body item,to create a second page like container on a single screen-->
-            <div class="item">
-                <div class="order" id="order">
-                    
-                    <h3 class="header">make all the shopping here<br>
-                    <img class="shop" src="shop.png"></h3>
-                    <hp class="categories">
-                        <a href="sofas.html"><button class="cat5">sofas</button></a>
-                        <button class="cat5">beds</button>
-                        <button class="cat5">wardrobes</button>
-                        <button class="cat5">tv stands</button>
-                        <button class="cat5">center tables</button>
-                        <button class="cat5">sideboards</button>
-                        <button class="cat5">others</button>
-                    </hp><br><br>
-                        <div class="check">Trending Sofas</div>
-                        <p>
-                        <div class="box3">
-                            <div class="item3">
-                                <img class="miss" src="30.jpg">
-                                <div class="image-buttons">
-                                    <button class="details" onclick="getLinkWhastapp()">visit</button>
-                                </div>
-                            </div>
-                            <div class="item3">
-                                <img class="miss" src="0.jpg">
-                                <div class="image-buttons">
-                                    <button class="details">visit</button>
-                                </div>
-                            </div>
-                            <div class="item3">
-                                <img class="miss" src="sofa13.jpg">
-                                <div class="image-buttons">
-                                    <button class="details">visit</button>
-                                </div>
-                            </div><br><br>
-                        <div class="check">Trending Beds</div>
-                        <div class="box3">
-                            <div class="item3">
-                                <img class="miss" src="bed13.jpg">
-                                <div class="image-buttons">
-                                    <button class="details">visit</button>
-                                </div>
-                            </div>
-                            <div class="item3">
-                                <img class="miss" src="bed17.jpg">
-                                <div class="image-buttons">
-                                    <button class="details">visit</button>
-                                </div>
-                            </div>
-                            <div class="item3">
-                                <img class="miss" src="bed14.jpg">
-                                <div class="image-buttons">
-                                    <button class="details">visit</button>
-                                </div>
-                            </div>
-                            <div class="item3">
-                                <img class="miss" src="bed15.jpg">
-                                <div class="image-buttons">
-                                    <button class="details">visit</button>
-                                </div>
-                            </div>
-                        
-                            <!-----picture codes missing---->
-                        </div><br><br>
-                        <div class="showroom" onclick="warn()"><br><br><h2 class="visit-show">
-                            Visit Showroom for more stuff<br>
-                            <button class="discount">visit</button>
-                           </h2>
-                        </div>
-                    </p>
-                    <div class="item" id="note1">
-                        <h4>didn't find your favorite?</h4>
-                        <div class="make" onclick="giveYourDesign()">give us your design</div>
-                        <br>
-                        <p>remember to provide the necessary details of the item
-                            to avoid misunderstandings and production of irrelevant items.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-            <br>
-            <div class="item">
-                <div class="intro" id="intro">
-                    <div class="back-into">
-                        
-                    <h4>GILTOUS MANAGEMENT</h4>
-                    <p>giltous exclusive brings to you variety of furniture products,
-                        services and related products as 
-                        listed on this site.
-                    <h3>we provide custom and ready made items here at your service.including 
-                        free delivery to all parts of and around kampala
-                       
-                    </h4>
-                    <a href="https://wa.me/+256705305731"><button class="chart">Talk To Giltous</button></a>
-                </p>
-                    </div>
-            <br>
-            <div class="item" id="third">
-                <h4>do you have any query about our products?</h4>
-                <p>Don't keep silent,ask whatever question you wish to ask about the giltous exclusive home furniture</p><br>
-                <img class="giltous" src=""><br><br>
-                <a href="mailto:atuhaumar@gmail.com"><button class="send">Ask Question</button></a><br><br><br>
-                <div class="item2" id="login-icons">
-                    <h3>Try our platforms for more information</h3><br>
-                    <div id="login-icon" class="fa fa-facebook"></div>
-                    <a href="https://wa.me/256765003100"><div id="login-icon" class="fa fa-whatsapp"></div></a>
-                    <div id="login-icon" class="fa fa-youtube "></div>
-                    <div id="login-icon" class="fa fa-twitter"></div>
-                    <div id="login-icon" class="fa fa-telegram"></div>
-                    <div id="login-icon" class="fa fa-google"></div>
-                    <a href="tel:(256)(765003100)"><div id="login-icon" class="fa fa-phone"></div></a>
-
-                </div>
-                </div>
+        <!---back to body content flow--><br><br><br>
+        <div class="products">
+            <div class="product4">
+                <div class="slider-container">
+                    <img src="a.jpg" class="slide" alt="Image 1">
+                    <img src="lcoffee.jpg" class="slide" alt="Image 2">
+                    <img src="l class.jpg" class="slide" alt="Image 3">
+                    <img src="leather class.jpg" class="slide" alt="Image 3">
+                    <img src="showroom.png" class="slide" alt="Image 3">
+                    <img src="shop.png" class="slide" alt="Image 3">
+                    <img src="chesterfil.jpg" class="slide" alt="Image 3">
+                    <img src="d.jpg" class="slide" alt="Image 3">
+                    <img src="0.jpg" class="slide" alt="Image 3">
+                    <img src="sofa14.jpg" class="slide" alt="Image 3">
+                    <img src="27.jpg" class="slide" alt="Image 3">
+                    <img src="29.jpg" class="slide" alt="Image 3">
+                    <img src="11.jpg" class="slide" alt="Image 3">
+                    <img src="b1 (1).jpg" class="slide" alt="Image 3">
+                    <img src="28.jpg" class="slide" alt="Image 3">
+                    <img src="30.jpg" class="slide" alt="Image 3">
+                    <img src="5.jpg" class="slide" alt="Image 3">
+                    <img src="9.jpg" class="slide" alt="Image 3">
                 </div>
             </div>
-            
-            
-
-            <!---third body item,dedicated for sideboard//center tables//TV.stands//
-            wardrobes//-------etc--------->
-            <div class="item">
-
+        </div>     
+    
+        <div class="body3">
+            <h3 class="clear-page-director">
+                make all the shopping here
+            </h3>
+            <div class="shop-buttons">
+                <button class="line">sofas</button>
+                <button class="line">beds</button>
+                <button class="line">wardrobes</button>
+                <button class="line">tv.stands</button>
+                <button class="line">tables</button>
+                <button class="line">sideboards</button>
+                <button class="line">electronis</button>
+                <button class="line">others</button>
             </div>
         </div><br>
-        <div class="nav-bottom" id="Bottom">
-            <div class="box2" id="navBottom">
-                <div class="item2">
-                    <h3>Important</h3><br>
-                    <li>services</li>
-                    <li>products</li>
-                    <li>branches</li>
-                    <li>about</li>
-                </div>
-                <div class="item2">
-                    <h3>Business</h3><br>
-                    <li>about orders</li>
-                    <li>installments</li>
-                    <li>trending designs</li>
-                    <li>available items</li>
-                </div>
-                <div class="item2" id="login-icons">
-                    <h3>Find us</h3><br>
-                    <div id="login-icon" class="fa fa-facebook"></div>
-                    <div id="login-icon" class="fa fa-whatsapp"></div>
-                    <div id="login-icon" class="fa fa-youtube "></div>
-                    <div id="login-icon" class="fa fa-twitter"></div>
-                    <div id="login-icon" class="fa fa-telegram"></div>
-                    <div id="login-icon" class="fa fa-google"></div>
-                    <div id="login-icon" class="fa fa-phone"></div>
-                    <br><br>
-                    <h6>all copyrights reserved @giltous exclusive.2024 </h6><br>
-                </div>
+        <div class="body3" id="body3">TRENDING</div>
+        <div class="products">
+            <div class="product2">
+                <img class="miss" src="c (2).jpg">
+            </div>
+            <div class="product2">
+                <img class="miss" src="sofa14.jpg" />
+            </div>
+            <div class="product2">
+                <img class="miss" src="bed14.jpg" />
+            </div>
+            <div class="product2">
+                <img class="miss" src="11.jpg" />
+            </div>
+            <div class="product2">
+                <img class="miss" src="child.jpg" />
+            </div>
+            <div class="product2">
+                <img class="miss" src="d.jpg" />
+            </div>
+            <div class="product2">
+                <img class="miss" src="sofa11.jpg" />
+            </div>
+            <div class="product2">
+                <img class="miss" src="sofa12.jpg" />
+            </div>
+        </div>
+        <div class="products">
+            <div class="product" id="white-product">
+                <h3 class="clear-page-director2">
+                    vist giltous exclusive showroom for ready made,customised products
+                    and various services
+                </h3>
+                <br>
+                <a href="room.html"><button class="linkage">showroom</button></a><br><br>
             </div>
             
         </div>
-        <button class="feedback" id="feed1" onclick="sendMessageToWhatsApp()">feedback</button>
-        
-      <div id="choice-design">
-                            <form type="form" class="myForm" method="POST" mailto="atuhaumar2@gmail.com">
-                                <br><h3 class="picture">Choose file or take a picture</h3>
-                                <input class="camera" id="picture" type="file" accept="image/*" capture="camera" /><br>
-                                <textarea class="additional-details" maxlength="200" placeholder="type here the necessary additional details" ></textarea><br>
-                                <button type="submit" class="summit" onclick="checkPicture()">submit</button>
-                                
-                            </form>
-                            <button class="quit-design" onclick="quitChoiceDesign()">quit</button>
-                        </div>
-                
-
-                        <!---giltous ex form-->
-                        <div id="account">
-                            <h2 class="head2">login</h2>
-                            <form type="submit" class="form1" method="post" >
-                                <input class="in-one" type="email" placeholder="phone/email" required/>
-                                <input class="in-one" type="password" placeholder="password" maxlength="9" required/>
-                                <br>
-                                <input type="radio" required/><label>i agree to the terms and conditions by giltous exclusive home furniture</label><br>
-
-                                <button type="submit" class="button1">submit</button>
-                            </form>
-                            <h3 class="reminder">didn't have an account?<button class="signup">signup</button></h3>
-                            
-                            <button class="ignore" onclick="closeAccount()">ignore</button>
-                        </div>
-
-
-                        <!----restriction update code-->
-                        <div id="close">
-                            <div id="restrict">WARNING</div>
-                            <h1 class="restriction">can't go on,this site is restricted by the developer</h1><br><br><br>
-                            <a href="mailto:atuhaumar@gmail.com"><button class="get-me">talk to developer</button></a>
-                        </div>
-                        <style>
-                            #close{background-color:rgb(48, 45, 45);color:rgb(255, 243, 243);
-                            text-shadow:0 5px 5px red;text-transform: capitalize;position:fixed;
-                        top:0;bottom:0;right:0;left:0;height:0;overflow: hidden;z-index: 1;}
-                            #restrict{font-size:35px;padding:50px;color:red;text-shadow:0 3px 4px;}
-                            .get-me{background-color:green;color:white;padding:10px 20px;border:0;border-radius:10px;}
-                        </style>
-                        <script>
-                            
-                        </script>
-                        </body>
-                        </html>
-    </body>
-   
+        <div class="giltous-management">
+            <h2 class="import">giltous management</h2>
+            <div class="products" >
+                    
+                <div class="product" id="management-product">
+                    <h3 class="clear-page-director2">director</h3>
+                    <img class="identity" src="contacts/director.jpg"/><br>
+                    contact the director giltous exclusive<br><br>
+                    <button class="reachOut" onclick="gettel()">talk to giltous</button>
+                </div>
+                <div class="product" id="management-product"><h3 class="clear-page-director2">sales manager</h3>
+                    <img class="identity" src="contacts/director.jpg"/><br>
+                        <!------  un filled content--------
+                --------------------------------
+                ---------------------------------><br><br>
+                    <button class="reachOut">sales manager</button></div>
+                    <div class="product" id="management-product"><h3 class="clear-page-director2">production manager</h3>
+                        <img class="identity" src="contacts/director.jpg"/><br>
+                        <!------- un filled content------
+                    ---------------------------------------
+                    -------------------------------------><br><br>
+                        <button class="reachOut">production manager</button></div>     
+         </div><br><br>
+        </div><br>
+        <div class="clear-page-nav-bottom">
+            <div class="flex-container">
+                <div class="nav-flex-box">
+                    <h3 class="clear-page-director2">Important</h3>
+                    <li class="nav-lines" id="line-over">about</li>
+                    <li class="nav-lines" id="line-over" onclick="getProducts()">products</li>
+                    <li class="nav-lines" id="line-over" onclick="getProducts()">services</li>
+                    <li class="nav-lines" id="line-over" onclick="getPlatform()">branches</li>
+                </div>
+                <div class="nav-flex-box">
+                    <h3 class="clear-page-director2">Business</h3>
+                    <li class="nav-lines" id="line-over">about orders</li>
+                    <li class="nav-lines" id="line-over">installment selling</li>
+                    <li class="nav-lines" id="line-over">trending designs</li>
+                    <li class="nav-lines" id="line-over">terms and conditions</li>
+                    <li class="nav-lines" id="line-over">privacy policy</li>
+                </div>
+            </div>
+            <div class="social-media">
+                <h3 class="clear-page-director">find us on our social media platforms</h3>
+                <i  class="fa fa-facebook" onclick="face()"></i>
+                <i class="fa fa-instagram" onclick="instagram()"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-whatsapp" onclick="chart()"></i>
+                <i class="fa fa-youtube" onclick="youtube()"></i>
+                <i class="fa fa-telegram" onclick="call()"></i>
+            </div>
+            <h5 style="color:grey;font-style: italic;">Allrights reserved by giltous exclusive @2025</h5>
+        </div>
+</body>
 </html>
