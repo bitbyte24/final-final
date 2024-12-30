@@ -1,4 +1,4 @@
-
+h
 function hideList(){
     var hidden=document.getElementById('productList');
     var name=document.getElementById('intro');
@@ -225,26 +225,12 @@ function youtube(){
 //----------listenned buttons...---
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll(".slide");
-    let currentIndex = 0;
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.classList.remove("active", "prev");
-            if (i === index) {
-                slide.classList.add("active");
-            } else if (i === (index - 1 + slides.length) % slides.length) {
-                slide.classList.add("prev");
-            }
-        });
-    }
+//------shopping buttons--------event handlers-------
 
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
-    }
 
-    showSlide(currentIndex);
-    setInterval(nextSlide, 3000); 
-});
+const home=document.getElementById('back-to-homepage');
+home.addEventListener('click',function(){
+    document.location.href="index.html";
+    });
+//-----room buttons event handler----------
