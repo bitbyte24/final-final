@@ -118,3 +118,133 @@ function quitSign(){
     sixth.style.height='0'
     
 }
+
+// ------js code for showroom page content-----/
+
+
+
+
+
+
+function blink(){
+    var light1=document.getElementById('chop')
+    setInterval(() => {
+        listen()
+    }, 3000);function listen(){
+        light1.style.color='green';
+    }
+    setInterval(() => {
+        deaph()
+    }, 6000);function deaph(){
+        light1.style.color='yellow';
+    }
+    
+}blink();
+
+//----awaiting update function for item presence updatr ---//
+
+setTimeout(() => {
+    load()
+}, 1);function load(){
+    var attacker=document.getElementById('pending');
+    attacker.style.maxHeight='1200px';
+}
+
+setTimeout(() => {
+    loader()
+}, 5000);function loader(){
+    var attacker=document.getElementById('pending');
+    attacker.style.maxHeight='0';
+}
+
+function clearMenuBring(){
+    var hambarg=document.getElementById('clear-page-menu');
+    hambarg.style.maxHeight='max-Content';
+    setTimeout(() => {
+        siteTheme()   
+       }, 1000);function siteTheme(){
+           var site=document.getElementById('extra-menu');
+           site.style.maxHeight='max-Content';
+       }
+       
+       setTimeout(() => {
+        quitSite()   
+       }, 7000);function quitSite(){
+           var sit=document.getElementById('extra-menu');
+           sit.style.maxHeight='0';
+       }
+}
+
+function clearMenu(){
+    var hambarg=document.getElementById('clear-page-menu');
+    hambarg.style.maxHeight='0';
+}
+
+
+function getPlatform(){
+    window.location.href='branches.html';
+}
+function getProducts(){
+    window.location.href="products and services.html";
+}
+function chart(){
+    
+    const message = "Hello giltous admin, I found this useful. Let's talk about it.";
+    
+    // Encode the message for use in a URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // Construct the WhatsApp URL with the phone number and message
+    const whatsappURL = `https://wa.me/${'+256765003100'}?text=${encodedMessage}`;
+    
+    // Open the URL in a new tab
+    window.open(whatsappURL, '_blank');
+}
+
+
+
+function face(){
+    const message="hello,giltous exclusive,i need your help from your website!";
+    const encodedMessage=encodeURIComponent(message);
+    const face=`https://www.facebook.com/profile.php?id=61561628670006?text=${encodedMessage}`;
+    window.open(face, '_black');
+}
+function instagram(){
+    const message = 'hello umar arts,i need help from your website';
+    const encodedMessage = encodeURIComponent(message)
+    const inst = `https://www.instagram.com/umararts24>igsh=YzljYTk1ODg3Zg==?text=${encodedMessage}`;
+    window.open(inst, '_blank')
+}
+function youtube(){
+    const message ="hello umar arts,i need some help";
+    const encodedMessage=encodeURIComponent(message);
+    const you= `https://youtube.com/@umararts-f9h?si=vEoOXpRONcLXtVi3?text=${encodedMessage}`;
+    window.open(you, '_blank')
+}
+
+//----------listenned buttons...---
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active", "prev");
+            if (i === index) {
+                slide.classList.add("active");
+            } else if (i === (index - 1 + slides.length) % slides.length) {
+                slide.classList.add("prev");
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    showSlide(currentIndex);
+    setInterval(nextSlide, 3000); 
+});
