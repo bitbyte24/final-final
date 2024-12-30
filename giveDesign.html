@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <title>upload file</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+    <div class="van3"></div><br><br><br><br>
+    <div class="product">
+        <h1>PLACE ORDER</h1>
+        
+           <div class="product3">
+            <button id="upload-button" class="linkage">Upload File</button>
+            <form type="submit" method="post" id="form">
+                <input type="file" id="file-input" style="display: none;" accept="image/*">
+            <div id="file-info" class="fill1"></div>
+            <img id="uploaded-image" style="border:1px solid grey; border-radius:10px; max-width: 50%; height: auto;" /><br>
+            <fieldset class="fieldset" >
+                <legend class="legend" >Additional ifornation</legend>
+                <select [(ngModel)]="model" id="category" class="fill1" required>
+                    <option *ngFor="let item of list" >idendify item category</option>
+                    <option *ngFor="let item of list" id="bed">bed</option>
+                    <option *ngFor="let item of list" id="dinning">dinning</option>
+                    <option *ngFor="let item of list" id="sofa">sofa</option>
+                    <option *ngFor="let item of list" id="sideboard">sideoard</option>
+                    <option *ngFor="let item of list" id="tv-stand">TV stand</option>
+                    <option *ngFor="let item of list" id="center-table">center table</option>
+                </select><br>
+                
+                    <input type="datetime-local" class="fill1" required><br>
+                    <fieldset class="fieldset" id="optional-code">
+                        <legend class="legend">optional to some items</legend>
+                        <div class="optional-information">
+                            <label class="label">color :</label><p id="additional-demo"></p>
+                            <input type="text" id="size2" class="fill1" placeholder="capacity/size">
+                        </div>
+                    </fieldset>
+            </fieldset><br>
+            <fieldset class="fieldset">
+                <legend class="legend">shipping address</legend>
+                <select class="fill1" required>
+                    <optgroup label="CENTRAL">
+                        <option value="">select shipping region</option>
+                        <option value="kampala">c-kampala</option>
+                        <option value="mukono">c-mukono</option>
+                    </optgroup>
+                    <optgroup label="NORTHERN" style="color:rgb(204, 27, 27);background-color:grey;">
+                        <option value="gulu">N-gulu</option>
+                        <option value="kitgum">N-kitgum</option>
+                    </optgroup>
+                </select><br>
+                <select class="fill1">
+                    <option value="say" class="placeholder1">select shipping district</option>
+                    <option value="1" class="legend">adjumani</option>
+                    <option value="2" class="legend">alua</option>
+                    <option value="3" class="legend">bushenyi</option>
+                    <option value="4" class="legend">bundibugyo</option>
+                    <option value="5" class="legend">entebbe</option>
+                    <option value="17" class="legend">isingiro</option>
+                    <option value="6" class="legend">kabaale</option>
+                    <option value="7" class="legend">kamuri</option>
+                    <option value="8" class="legend">ka'bong</option>
+                    <option value="9" class="legend">kaberamaido</option>
+                    <option value="10" class="legend">kalangala</option>
+                    <option value="11" class="legend">kampala</option>
+                    <option value="12" class="legend">mbarara</option>
+                    <option value="13" class="legend">mbale</option>
+                    <option value="14" class="legend">ntungamo</option>
+                    <option value="15" class="legend">rukungiri</option>
+                    <option value="16" class="legend">sheema</option>
+                    <option value="18" class="legend"></option>
+                    <option value="19" class="legend"></option>
+                    <option value="20" class="legend"></option>
+                    <option value="17" class="legend"></option>
+                    <option value="17" class="legend"></option>
+                    <option value="17" class="legend"></option>
+                    <option value="17" class="legend"></option>
+                    <option value="17" class="legend"></option>
+                    <option value="17" class="legend"></option>
+                    <option value="17" class="legend"></option>
+                    <option value="17" class="legend"></option>
+                    <option value="17" class="legend"></option>
+    
+                    
+                </select><br>
+                
+                <input type="text" class="fill1" placeholder="county" required><br>
+                <input type="text" class="fill1" placeholder="sub-county" required><br>
+                <input type="text" class="fill1" placeholder="parish" required><br>
+                <input type="text" class="fill1" placeholder="village/street" required><br>
+                <input type="text" class="fill1" placeholder="your full name" required><br>
+                <input type="email" class="fill1" placeholder="your email address" required><br>
+                <input type="tel" class="fill1" placeholder="active phone number" required>
+                <p id="notification"></p>
+                
+            </fieldset><br>
+            </form>
+            <button class="send">Item check</button>
+            <button type="submit" id="send-button" style="background-color:chocolate;color:white;font-weight:bold;">Place order</button>
+            
+           </div>
+    </div>
+
+    <script>
+        document.getElementById("upload-button").addEventListener("click", function() {
+            document.getElementById("file-input").click();
+        });
+
+        document.getElementById("file-input").addEventListener("change", function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.getElementById("uploaded-image");
+                    img.src = e.target.result;
+                    img.style.display = "block";
+                };
+                reader.readAsDataURL(file);
+
+                const fileInfo = document.createElement("p");
+                fileInfo.textContent = `File Name: ${file.name}, File Size: ${file.size} bytes`;
+                document.getElementById("file-info").appendChild(fileInfo);
+            }
+        });
+        
+function manipulate(){
+document.getElementById('additional-demo').innerHTML= '<input type="color" id="colorPicker" name="color" value="choose color" class="fill1"/>';
+}manipulate();
+//------checking item availablity---------------
+const file = document.getElementById('file-input');
+const info =document.getElementById('file-infor');
+const availability=document.querySelector('.send');
+var outPut=document.getElementById('notification');
+availability.addEventListener('click',function checkItem(){
+if (file.files.length==0) {
+    outPut.innerHTML='<h4 id="warning" style="color:red;">Empty,upload item first!</h4>';
+}else{
+    outPut.innerHTML='<h4 style="color:green;">Well, item is available 👍</h4>';
+}
+});
+//--------validate order form for final submision------
+const capacity=document.getElementById('size2');
+var outPut=document.getElementById('notification');
+const file2 = document.getElementById('file-input');
+const btn=document.getElementById('send-button').addEventListener('click',function validation(){
+if(file2.files.length===0 || capacity.value==''){
+    outPut.innerHTML='<h4 id="warning" style="color:red;">All fields must be filled!</h4>'
+}else{
+    document.location.href="order-infor.php";
+}
+})
+setInterval(() => {
+    flash()
+}, 1000);function flash(){
+    document.getElementById('warning').style.opacity='0.01';
+}
+setInterval(() => {
+    flosh()
+}, 2000);function flosh(){
+    document.getElementById('warning').style.opacity='20';
+}
+    </script>
+</body>
+</html>

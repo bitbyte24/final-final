@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+
+
+<body class="body2">
+    <div class="van3"></div>
+    <div class="van">
+        <div class=""></div>
+        <h2>Giltous Showroom</h2>
+        <div class=""></div>
+    </div>
+        <br><br><br>
+    <div class="products">
+        <div class="product">
+            <div id="item-details">
+            <h2><img class="sale" id="img" src="L6.jpg"></h2>
+            <P>Price: UGX,5.5M</P>
+            </div>
+            <button class="buy-now" id="buy-but">Buy Now</button>
+            <button class="add-to-cart" id="add-to-cart-button">Add to Cart</button>
+            <button class="details">details</button>
+            </div>
+        <div class="product">
+            <div id="item-details">
+            <h2><img class="sale" id="img" src="SOFA10.jpg"></h2>
+            <p>Price: UGX,2.7M</p>
+            </div>
+            <button class="buy-now" id="buy-but">Buy Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="details">Details</button>
+        </div>
+        <div class="product">
+            <div id="item-details">
+            <h2><img class="sale" src="sofa13.jpg"></h2>
+            <p>Price: UGX,12.99M</p>
+            </div>
+            <button class="buy-now" id="buy-but">Buy Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="details">Details</button>
+        </div>
+        <div class="product">
+            <div id="item-details">
+            <h2><img class="sale" id="img" src="bed17.jpg"/></h2>
+            <p>Price: UGX,0.95M</p>
+            </div>
+            <button class="buy-now" >Buy Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="details">Details</button>
+        </div>
+        <div class="product">
+            <div id="item-details">
+            <h2><img class="sale" id="img" src="showroom.png" /> </h2>
+            <p>Price: UGX,7.99M</p>
+            </div>
+            <button class="buy-now" >Buy Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+            <button class="details">Details</button>
+        </div>
+        <div class="product">
+            <h3 class="clear-page-director2">
+                didn't find your favourite?
+            </h3>
+            <br>
+            <a href="giveDesign.html"><button class="linkage">take picture</button></a>
+        </div>
+    </div>
+    <div class="nav-bottom2">
+        <p id="over-width"></p>
+        <h2>navigate to more pages</h2>
+        <a href="index.html"><button class="buy">≺</button></a>
+        <button class="buy">2</button>
+        <button class="buy">3</button>
+        <button class="buy">4</button>
+        <button class="buy">5</button>
+        <button class="buy">≻</button><br>
+        <h5 style="color:rgb(177, 173, 173);font-weight: bold;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
+            this page is regulated by @giltous-exclusive management 
+            for effecient customer and their property handling.<br>
+            find us on our socila media platforms for more services;<br><br>
+            <div class="social-media">
+                <i class="fa fa-youtube" onclick="youtube()"></i>
+            <i class="fa fa-facebook" onclick="face()"></i>
+            <i class="fa fa-instagram" onclick="instagram()"></i>
+            <i class="fa fa-telegram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-whatsapp" onclick="chart()"></i>
+            </div><br><br><br>
+            allrights reserved @giltous-exclusive-2025
+        </h5>
+    </div>
+    
+    <div class="information"></div>
+    <script>
+        var buy=document.getElementById('buy-but');
+buy.addEventListener('click',function(){
+    document.location.href="payment.html";
+});
+
+//------notification popup----
+setTimeout(() => {
+    notice()
+}, 7000);function notice(){
+    const showMe=document.querySelector('.information');
+    showMe.innerHTML='<h4 class="notify"><i class="fa fa-thumbs-up"></i><br>all items on this page are currently available</h4>';
+}
+setTimeout(() => {
+    noticeOff()
+}, 12000);function noticeOff(){
+    const showThem=document.querySelector('.information');
+    showThem.style.maxHeight='0';
+}
+    </script>
+    <script src="assets/script.js"></script>
+</body>
+</html>

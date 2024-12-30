@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
+    
 </head>
 <body>
     <div class="van3"></div>
@@ -71,16 +72,64 @@
                 make all the shopping here
             </h3>
             <div class="shop-buttons">
-                <button class="line">sofas</button>
-                <button class="line">beds</button>
-                <button class="line">wardrobes</button>
-                <button class="line">tv.stands</button>
-                <button class="line">tables</button>
-                <button class="line">sideboards</button>
-                <button class="line">electronis</button>
-                <button class="line">others</button>
+                <button class="line" id="sofas-button">sofas</button>
+                <button class="line" id="beds-button">beds</button>
+                <button class="line" id="wardrobes-button">wardrobes</button>
+                <button class="line" id="stands-button">tv.stands</button>
+                <button class="line" id="tables-button">tables</button>
+                <button class="line" id="sideboards-button">sideboards</button>
+                <button class="line" id="electronics-button">electronis</button>
+                <button class="line" id="others-button">others</button>
             </div>
-        </div><br>
+        </div>
+
+    <!-----------------------------------
+        ---------------------------------
+        -----next upload html code-----
+        ----------------------------------
+        ------------------------------------>
+        <script>
+            const btn=document.getElementById('sofas-button').addEventListener('click',function(){
+document.location.href="sofas.html";
+});
+
+const bed=document.getElementById('beds-button');
+bed.addEventListener('click',function(){
+    document.location.href="beds.html";
+});
+
+//=================================
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".slide");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active", "prev");
+            if (i === index) {
+                slide.classList.add("active");
+            } else if (i === (index - 1 + slides.length) % slides.length) {
+                slide.classList.add("prev");
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    showSlide(currentIndex);
+    setInterval(nextSlide, 3000); // Change image every 3 seconds
+});
+        </script>
+        
+        
+        
+        
+        
+        
+        <br>
         <div class="body3" id="body3">TRENDING</div>
         <div class="products">
             <div class="product2">
@@ -172,5 +221,30 @@
             </div>
             <h5 style="color:grey;font-style: italic;">Allrights reserved by giltous exclusive @2025</h5>
         </div>
+        <script>
+            var wards=document.getElementById('wardrobes-button').addEventListener('click',function(){
+  document.location.href="wardrobes.html";
+});
+
+document.getElementById('stands-button').addEventListener('click',function(){
+    document.location.href="tv-stands.html";
+  });
+
+  document.getElementById('tables-button').addEventListener('click',function(){
+    document.location.href="tables.html";
+  });
+
+  document.getElementById('sideboards-button').addEventListener('click',function(){
+    document.location.href="sideboards.html";
+  });
+
+  document.getElementById('electronics-button').addEventListener('click',function(){
+    document.location.href="electronics.html";
+  });
+
+  document.getElementById('others-button').addEventListener('click',function(){
+    document.location.href="others.html";
+  });
+        </script>
 </body>
 </html>
